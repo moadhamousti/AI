@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  // darkMode: "class",
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -38,13 +38,6 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        lime: {
-			100: "#F7FEE7", // Light lime green
-			200: "#D9F99D", // Softer lime
-			400: "#A3E635", // Bright lime green
-			500: "#84CC16", // Vivid lime
-			600: "#65A30D",
-        },
         dark: {
           400: "#7986AC",
           500: "#606C80",
@@ -81,8 +74,9 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        "lime-gradient": "url('/assets/images/gradient-bg.svg')",
+        "lime-gradient": "white",
         banner: "url('/assets/images/banner-bg.png')",
+        'custom-radial': "bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC,#EAEEFE_66%)]",
       },
       keyframes: {
         "accordion-down": {
