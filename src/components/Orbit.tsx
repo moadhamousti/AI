@@ -19,7 +19,7 @@ export const Orbit = (props: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
       className={twMerge(
-        "w-[200px] h-[200px] border border-gray-200/25 rounded-full absolute",
+        "size-[200] border border-gray-200/25 rounded-full absolute",
         props.className
       )}
     ></div>

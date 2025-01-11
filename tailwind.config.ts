@@ -21,6 +21,12 @@ const config: Config = {
       sans: ["var(--font-inter)", "sans-serif"],
       IBMPlex: ["var(--font-ibm-plex)"],
     },
+    rotate: {
+      135: "135deg",
+      225: "225deg",
+      270: "270deg",
+      315: "315deg",
+    },
     screens: {
       sm: "375px",
       md: "768px",
