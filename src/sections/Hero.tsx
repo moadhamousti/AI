@@ -46,6 +46,10 @@ export const Hero = () => {
                 Start Chatting
               </Button>
             </div>
+            <div className="relative">
+              <div className="absolute left-1/2 top-0">
+                <div className="bg-gradient-to-b from-violet-400 to-gray-950 size-8 rounded-full -translate-x-[316px] -translate-y-[76px] rotate-135"></div>
+              </div>
             <div className="mt-20 rounded-2xl border-2 overflow-hidden border-gradient relative flex">
               <Image src={robotImg} alt="Robot Image" />
               <div className="absolute bottom-2 left-1/2 md:bottom-4 -translate-x-1/2 px-4">
