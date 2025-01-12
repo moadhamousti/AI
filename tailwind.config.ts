@@ -8,13 +8,15 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  corePlugins: {
+    transform: true, // Ensure this is not set to false
+  },
   theme: {
     container: {
       center: true,
       padding: {
         DEFAULT: "1rem",
-        md: "2rem",
-        lg: "4rem",
+        lg: "2rem",
       },
     },
     fontFamily: {

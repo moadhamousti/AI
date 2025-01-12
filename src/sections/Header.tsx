@@ -1,9 +1,9 @@
 "use client";
-import logoImage from "@/assets/images/sphereal-logo.svg?url";
 import { Button, ButtonProps } from "@/components/Button";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { Orbit } from "@/components/Orbits";
+import { Logo } from "@/components/Logo";
 
 export const navItems = [
   {
@@ -45,13 +45,7 @@ export const Header = () => {
         <div className="container">
           <div className="h-[75px] lg:h-20 flex items-center justify-between">
             <div className="flex gap-4 items-center">
-              <div
-                className="size-10 bg-gray-200 bg-[conic-gradient(from_45deg,var(--color-violet-400),var(--color-fuchsia-400),var(--color-amber-300),var(--color-teal-300),var(--color-violet-400))]"
-                style={{
-                  maskImage: `url(${logoImage.src})`,
-                  maskSize: "contain",
-                }}
-              ></div>
+              <Logo/>
               <div className="font-extrabold text-2xl">Sphereal.ai</div>
             </div>
             <div className="h-full hidden lg:block">
