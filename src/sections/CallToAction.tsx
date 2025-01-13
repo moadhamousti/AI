@@ -7,7 +7,7 @@ import { Planet } from "@/components/Planet";
 
 export const CallToAction = () => {
   return (
-    <section className="pb-[1000px]">
+    <section className="">
       <div className="container">
         <SectionBorder borderTop>
           <SectionContent className="relative overflow-hidden isolate">
@@ -20,9 +20,49 @@ export const CallToAction = () => {
               <Orbit className="size-[800px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
-              <Planet size="lg" color="violet" className=""/>
+              <Planet
+                size="lg"
+                color="violet"
+                className="translate-y-[200px] -translate-x-[200px] rotate-[45deg]"
+              />
             </div>
-            <h2 className="text-gray-200 font-semibold text-3xl text-center leading-tight md:text-4xl">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
+              <Planet
+                size="lg"
+                color="violet"
+                className="translate-x-[200px] -translate-y-[200px] -rotate-[135deg]"
+              />
+            </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
+              <Planet
+                size="md"
+                color="teal"
+                className="-translate-x-[500px] rotate-[90deg]"
+              />
+            </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
+              <Planet
+                size="md"
+                color="teal"
+                className="translate-x-[500px] -translate-y-[100px]  rotate-[135deg]"
+              />
+            </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
+              <Planet
+                size="sm"
+                color="fuchsia"
+                className="-translate-y-[250px] -translate-x-[400px]  rotate-[135deg]"
+              />
+            </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
+              <Planet
+                size="sm"
+                color="fuchsia"
+                className="translate-x-[400px] translate-y-[150px]  -rotate-[45deg]"
+              />
+            </div>
+            
+            <h2 className="text-gray-200 font-semibold text-3xl text-center leading-tight md:text-4xl lg:text-5xl max-w-3xl mx-auto">
               Join the AI Revolution with{" "}
               <span className="relative isolate">
                 <span>Sphereal</span>
@@ -37,7 +77,7 @@ export const CallToAction = () => {
                 ></span>
               </span>
             </h2>
-            <p className="text-center text-xl mt-8 ">
+            <p className="text-center text-xl mt-8 max-w-2xl mx-auto">
               Experience the transformative of AI with Sphereal. Boost your
               productivity and streamline your workflow with our innovative AI
               chat platform.

@@ -79,7 +79,7 @@ export const Header = () => {
                   <div
                     className={twMerge(
                       "w-4 h-0.5 bg-gray-100 -translate-y-1 transition duration-300",
-                      isMobileNavOpen && "translate-y-0 rotate-45"
+                      isMobileNavOpen && "translate-y-0 rotate-[45deg]"
                     )}
                   ></div>
                 </div>
@@ -87,7 +87,7 @@ export const Header = () => {
                   <div
                     className={twMerge(
                       "w-4 h-0.5 bg-gray-100 translate-y-1 transition duration-300",
-                      isMobileNavOpen && "translate-y-0 -rotate-45"
+                      isMobileNavOpen && "translate-y-0 -rotate-[45deg]"
                     )}
                   ></div>
                 </div>
