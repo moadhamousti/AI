@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import {
   faYoutube,
@@ -21,7 +23,7 @@ export const navItems = [
   },
   {
     name: "Login",
-    href: "#login",
+    href: "#",
   },
 ];
 
@@ -48,13 +50,20 @@ export const Footer = () => {
     <footer className="border-t border-[var(--color-border)]">
       <div className="container py-8">
         <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-8">
-          <div className="font-extrabold text-2xl">Sphereal AI</div>
+          <div className="font-extrabold text-2xl">Orbitra AI</div>
           <nav className="flex flex-col md:flex-row gap-8 md:gap-16 items-center ">
             {navItems.map((item) => (
               <a
                 href={item.href}
                 key={item.href}
                 className="uppercase text-xs tracking-widest font-bold text-gray-400"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector(item.href);
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 {item.name}
               </a>
@@ -72,7 +81,7 @@ export const Footer = () => {
             ))}
           </div>
           <p className="text-gray-500 text-sm">
-            &copy; Frontend Tribe, All Rights reserved.
+            &copy; All Rights reserved.
           </p>
         </div>
       </div>

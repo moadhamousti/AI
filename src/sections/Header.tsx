@@ -45,8 +45,8 @@ export const Header = () => {
         <div className="container">
           <div className="h-[75px] lg:h-20 flex items-center justify-between">
             <div className="flex gap-4 items-center">
-              <Logo/>
-              <div className="font-extrabold text-2xl">Sphereal.ai</div>
+              <Logo />
+              <div className="font-extrabold text-2xl">Orbitra.ai</div>
             </div>
             <div className="h-full hidden lg:block">
               <nav className="h-full">
@@ -55,6 +55,13 @@ export const Header = () => {
                     href={href}
                     key={href}
                     className="h-full px-10 relative font-bold text-xs tracking-widest text-gray-400 uppercase inline-flex items-center before:content-[''] before:absolute before:bottom-0 before:h-2 before:w-px before:bg-gray-200/20 before:left-0  last:after:absolute last:after:bottom-0 last:after:h-2 last:after:w-px last:after:bg-gray-200/20 last:after:right-0 last:after:block"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.querySelector(href);
+                      if (element) {
+                        element.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
                   >
                     {name}
                   </a>
@@ -119,7 +126,15 @@ export const Header = () => {
                 <a
                   href={href}
                   key={name}
-                  className="text-gray-400 uppercase tracking-widest text-xs h-10"
+                  className="text-gray-400 uppercase tracking-widest text-xs h-10 font-bold"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.querySelector(href);
+                    if (element) {
+                      setIsMobileNavOpen(false);
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                 >
                   {name}
                 </a>

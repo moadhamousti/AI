@@ -65,7 +65,7 @@ export const CallToAction = () => {
             <h2 className="text-gray-200 font-semibold text-3xl text-center leading-tight md:text-4xl lg:text-5xl max-w-3xl mx-auto">
               Join the AI Revolution with{" "}
               <span className="relative isolate">
-                <span>Sphereal</span>
+                <span>Orbitra</span>
                 <span
                   className="absolute top-full left-0 w-full h-4 bg-[linear-gradient(to_right,var(--color-amber-300),var(--color-teal-300),var(--color-violet-400),var(--color-fuchsia-400))] -translate-y-1/2 "
                   style={{
@@ -78,7 +78,7 @@ export const CallToAction = () => {
               </span>
             </h2>
             <p className="text-center text-xl mt-8 max-w-2xl mx-auto">
-              Experience the transformative of AI with Sphereal. Boost your
+              Experience the transformative of AI with Orbitra. Boost your
               productivity and streamline your workflow with our innovative AI
               chat platform.
             </p>

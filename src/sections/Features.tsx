@@ -66,11 +66,11 @@ export const logos = [
 
 export const Features = () => {
   return (
-    <section className="">
-      <div className="container">
+    <section className="" id="features">
+      <div className="container ">
         <SectionBorder borderTop>
           <SectionContent className="md:px-20 lg:px-40">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 ">
               <div className="">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-200 leading-tight">
                   Your AI-powered collaboration companion
@@ -90,8 +90,8 @@ export const Features = () => {
                   Try it Now
                 </Button>
               </div>
-              <div className="flex justify-center">
-                <div className="size-[270px] md:size-[450px] relative flex flex-shrink-0">
+              <div className="flex justify-center ">
+                <div className="size-[270px] md:size-[450px] relative flex flex-shrink-0 ">
                   <div className="absolute inset-0">
                     <Orbit className="size-full" />
                   </div>

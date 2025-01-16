@@ -11,7 +11,7 @@ import { SectionContent } from "@/components/SectionContent";
 export const Hero = () => {
   return (
     <section className="">
-      <div className="container">
+      <div className="container overflow-hidden">
         <SectionBorder>
           <SectionContent className="relative isolate [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
             <div className="absolute -z-10 inset-0 bg-[radial-gradient(circle_farthest-corner,var(--color-fuchsia-900)_50%,var(--color-indigo-900)_75%,transparent)] [mask-image:radial-gradient(circle_farthest-side,black,transparent)]"></div>
@@ -28,7 +28,7 @@ export const Hero = () => {
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold text-gray-100 text-center leading-tight">
               Unlock the Future of AI Conversations with{" "}
               <span className="relative">
-                <span>Sphereal</span>{" "}
+                <span>Orbitra</span>{" "}
                 <span
                   className="absolute w-full left-0 top-full -translate-y-1/2 h-4 bg-[linear-gradient(to_right,var(--color-amber-300),var(--color-teal-300),var(--color-violet-400),var(--color-fuchsia-400))]"
                   style={{
@@ -41,7 +41,7 @@ export const Hero = () => {
               </span>
             </h1>
             <p className="text-center text-lg mt-8 md:text-xl max-w-3xl mx-auto">
-              Harness the power of AI with Sphereal. Elevate your productivity
+              Harness the power of AI with Orbitra. Elevate your productivity
               and streamline our workflow with cutting-edge AI chat platform.
             </p>
             <div className="flex justify-center">
@@ -75,7 +75,7 @@ export const Hero = () => {
               <div className="absolute left-0 z-10 top-[30%] -translate-x-10 hidden lg:block">
                 <div className="bg-gray-800/70 backdrop-blur-md border-gray-700 rounded-xl p-4 w-72">
                   <div className="">
-                    Can you generate an incredible frontend dev video tutorial?
+                    Can you generate an incredible dev tutorials for videos?
                   </div>
                   <div className="text-right text-gray-400 text-sm font-semibold">
                     1m ago
@@ -85,8 +85,8 @@ export const Hero = () => {
               <div className="absolute right-0 z-10 top-[50%] translate-x-10 hidden lg:block">
                 <div className="bg-gray-800/70 backdrop-blur-md border-gray-700 rounded-xl p-4 w-72">
                   <div className="">
-                    <strong>Brainwave:</strong> I created one based on based on
-                    videos from Frontend Tribe!
+                    <strong>Brainwave:</strong> I created one based on
+                    videos from Youtube!
                   </div>
                   <div className="text-right text-gray-400 text-sm font-semibold">
                     1m ago

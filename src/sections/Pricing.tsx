@@ -65,7 +65,7 @@ export const pricingTiers = [
 
 export const Pricing = () => {
   return (
-    <section className="">
+    <section className="" id="pricing">
       <div className="container">
         <SectionBorder borderTop>
           <SectionContent>
