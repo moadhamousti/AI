@@ -32,7 +32,7 @@
 }
 
 .auth {
-  @apply flex-center min-h-screen w-full bg-black
+  @apply flex-center min-h-screen w-full
 }
 
 .root {
@@ -264,6 +264,18 @@
     @apply flex-center p-14-medium h-full min-h-72 flex-col gap-5 rounded-[16px] border border-dashed bg-white/20 shadow-inner;
   }
 }
+
+
+/* .cl-rootBox, */
+.cl-signIn-root,
+.cl-internal-phfxlr {
+  border: 2px solid transparent;
+  border-radius: 15px;
+  background: linear-gradient(var(--color-gray-950), var(--color-gray-950)) padding-box,
+              conic-gradient(from 45deg, var(--color-violet-400), var(--color-fuchsia-400), var(--color-amber-300), var(--color-teal-300), var(--color-violet-400));
+}
+
+
 
 
 

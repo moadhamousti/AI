@@ -1,11 +1,30 @@
+"use client";
+
 import { Button } from "@/components/Button";
 import { SectionBorder } from "@/components/SectionBorder";
 import { SectionContent } from "@/components/SectionContent";
 import underlineImage from "@/assets/images/underline.svg?url";
 import { Orbit } from "@/components/Orbit";
 import { Planet } from "@/components/Planet";
+import { useScroll, useSpring, useTransform, motion } from "framer-motion";
+import { useRef } from "react";
+import { useMousePosition } from "./Hero";
 
 export const CallToAction = () => {
+  const { xProgress, yProgress } = useMousePosition();
+
+  const springX = useSpring(xProgress);
+  const springY = useSpring(yProgress);
+
+  const translateLargeX = useTransform(springX, [0, 1], ["-25%", "25%"]);
+  const translateLargeY = useTransform(springY, [0, 1], ["-25%", "25%"]);
+
+  const translateMediumX = useTransform(springX, [0, 1], ["-50%", "50%"]);
+  const translateMediumY = useTransform(springY, [0, 1], ["-50%", "50%"]);
+
+  const translateSmallX = useTransform(springX, [0, 1], ["-150%", "150%"]);
+  const translateSmallY = useTransform(springY, [0, 1], ["-150%", "150%"]);
+
   return (
     <section className="">
       <div className="container">
@@ -20,48 +39,90 @@ export const CallToAction = () => {
               <Orbit className="size-[800px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
-              <Planet
-                size="lg"
-                color="violet"
-                className="translate-y-[200px] -translate-x-[200px] rotate-[45deg]"
-              />
+              <motion.div
+                style={{
+                  x: translateLargeX,
+                  y: translateLargeY,
+                }}
+              >
+                <Planet
+                  size="lg"
+                  color="violet"
+                  className="translate-y-[200px] -translate-x-[200px] rotate-[45deg]"
+                />
+              </motion.div>
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
-              <Planet
-                size="lg"
-                color="violet"
-                className="translate-x-[200px] -translate-y-[200px] -rotate-[135deg]"
-              />
+              <motion.div
+                style={{
+                  x: translateLargeX,
+                  y: translateLargeY,
+                }}
+              >
+                <Planet
+                  size="lg"
+                  color="violet"
+                  className="translate-x-[200px] -translate-y-[200px] -rotate-[135deg]"
+                />
+              </motion.div>
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
-              <Planet
-                size="md"
-                color="teal"
-                className="-translate-x-[500px] rotate-[90deg]"
-              />
+              <motion.div
+                style={{
+                  x: translateMediumX,
+                  y: translateMediumY,
+                }}
+              >
+                <Planet
+                  size="md"
+                  color="teal"
+                  className="-translate-x-[500px] rotate-[90deg]"
+                />
+              </motion.div>
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
-              <Planet
-                size="md"
-                color="teal"
-                className="translate-x-[500px] -translate-y-[100px]  rotate-[135deg]"
-              />
+              <motion.div
+                style={{
+                  x: translateMediumX,
+                  y: translateMediumY,
+                }}
+              >
+                <Planet
+                  size="md"
+                  color="teal"
+                  className="translate-x-[500px] -translate-y-[100px]  rotate-[135deg]"
+                />
+              </motion.div>
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
-              <Planet
-                size="sm"
-                color="fuchsia"
-                className="-translate-y-[250px] -translate-x-[400px]  rotate-[135deg]"
-              />
+              <motion.div
+                style={{
+                  x: translateSmallX,
+                  y: translateSmallY,
+                }}
+              >
+                <Planet
+                  size="sm"
+                  color="fuchsia"
+                  className="-translate-y-[250px] -translate-x-[400px]  rotate-[135deg]"
+                />
+              </motion.div>
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
-              <Planet
-                size="sm"
-                color="fuchsia"
-                className="translate-x-[400px] translate-y-[150px]  -rotate-[45deg]"
-              />
+              <motion.div
+                style={{
+                  x: translateSmallX,
+                  y: translateSmallY,
+                }}
+              >
+                <Planet
+                  size="sm"
+                  color="fuchsia"
+                  className="translate-x-[400px] translate-y-[150px]  -rotate-[45deg]"
+                />
+              </motion.div>
             </div>
-            
+
             <h2 className="text-gray-200 font-semibold text-3xl text-center leading-tight md:text-4xl lg:text-5xl max-w-3xl mx-auto">
               Join the AI Revolution with{" "}
               <span className="relative isolate">

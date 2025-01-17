@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import AshwinSantiago from "@/assets/images/ashwin-santiago.jpg";
 import AlecWhitten from "@/assets/images/alec-whitten.jpg";
 import ReneWells from "@/assets/images/rene-wells.jpg";
@@ -10,6 +10,7 @@ import { SectionContent } from "@/components/SectionContent";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
 export const testimonials = [
   {
@@ -42,57 +43,81 @@ export const testimonials = [
   },
 ];
 
-const SELECTED_TESTIMONIAL_INDEX = 0;
+// const SELECTED_TESTIMONIAL_INDEX = 0;
 
 export const Testimonials = () => {
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
   return (
     <section className="" id="testimonials">
       <div className="container">
         <SectionBorder borderTop>
           <SectionContent>
-            <div className="border-gradient rounded-3xl lg:px-16 lg:py-24 px-6 md:px-10 py-16 relative flex flex-col md:flex-row items-center gap-12 md:mx-10 lg:mx-20">
-              <FontAwesomeIcon
-                icon={faQuoteLeft}
-                className="absolute size-20 text-violet-400 top-0 -translate-y-1/2 left-6 md:left-10 lg:left-16"
-              />
-              {testimonials.map(
-                (testimonial, index) =>
-                  SELECTED_TESTIMONIAL_INDEX === index && (
-                    <blockquote
-                      key={testimonial.name}
-                      className="flex flex-col gap-12 lg:flex-row"
-                    >
-                      <p className="text-xl font-medium md:text-2xl">{testimonial.quote}</p>
-                      <cite className="not-italic lg:text-right">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className="rounded-xl size-28 md:text-2xl max-w-none"
-                        />
-                        <div className="font-bold mt-4">{testimonial.name}</div>
-                        <div className="text-xs text-gray-400 mt-2">
-                          {testimonial.title}
-                        </div>
-                      </cite>
-                    </blockquote>
-                  )
-              )}
+            <LayoutGroup>
+              <motion.div
+                layout
+                className="border-gradient rounded-3xl lg:px-16 lg:py-24 px-6 md:px-10 py-16 relative flex flex-col md:flex-row gap-12 md:mx-10 lg:mx-20"
+              >
+                <FontAwesomeIcon
+                  icon={faQuoteLeft}
+                  className="absolute size-20 text-violet-400 top-0 -translate-y-1/2 left-6 md:left-10 lg:left-16"
+                />
+                <AnimatePresence mode="wait" initial={false}>
+                  {testimonials.map(
+                    (testimonial, index) =>
+                      testimonialIndex === index ? (
+                        <motion.blockquote
+                          key={`testimonial-${index}`} // Ensure a unique key for each testimonial
+                          initial={{ opacity: 0, y: 25 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 25 }}
+                          transition={{ duration: 0.5, ease: "easeInOut" }}
+                          className="flex flex-col gap-12 lg:flex-row"
+                          layout
+                        >
+                          <p className="text-xl font-medium md:text-2xl">
+                            {testimonial.quote}
+                          </p>
+                          <cite className="not-italic lg:text-right">
+                            <Image
+                              src={testimonial.image}
+                              alt={testimonial.name}
+                              className="rounded-xl size-28 md:text-2xl max-w-none"
+                            />
+                            <div className="font-bold mt-4">
+                              {testimonial.name}
+                            </div>
+                            <div className="text-xs text-gray-400 mt-2">
+                              {testimonial.title}
+                            </div>
+                          </cite>
+                        </motion.blockquote>
+                      ) : null // Ensure only one testimonial is rendered
+                  )}
+                </AnimatePresence>
 
-              {/* Render dots only once, outside of the testimonial map */}
-              <div className="flex gap-2 justify-center md:flex-col">
-                {testimonials.map((_, index) => (
-                  <div
-                    className="size-6 relative isolate inline-flex items-center justify-center"
-                    key={index}
-                  >
-                    {SELECTED_TESTIMONIAL_INDEX === index && (
-                      <div className="absolute border-gradient size-full rounded-full -z-10"></div>
-                    )}
-                    <div className="size-1.5 bg-gray-200 rounded-full"></div>
-                  </div>
-                ))}
-              </div>
-            </div>
+                {/* Render dots only once, outside of the testimonial map */}
+                <motion.div
+                  layout="position"
+                  className="flex gap-2 md:flex-col"
+                >
+                  {testimonials.map((_, index) => (
+                    <div
+                      className="size-6 relative isolate inline-flex items-center justify-center"
+                      key={index}
+                      onClick={() => setTestimonialIndex(index)}
+                    >
+                      {testimonialIndex === index && (
+                        <motion.div
+                          className="absolute border-gradient size-full rounded-full -z-10"
+                          layoutId="testimonial-dot"
+                        ></motion.div>
+                      )}
+                      <div className="size-1.5 bg-gray-200 rounded-full"></div>
+                    </div>
+                  ))}
+                </motion.div>
+              </motion.div>
+            </LayoutGroup>
           </SectionContent>
         </SectionBorder>
       </div>

@@ -1,9 +1,10 @@
 import React from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-    return (
-        <main className="auth">
-            {children}
-        </main>
-    );
+  return (
+    <div className="container  pb-0">
+        <main className="auth">{children}</main>
+    </div>
+
+  );
 }

@@ -19,7 +19,7 @@ import { SectionBorder } from "@/components/SectionBorder";
 import { SectionContent } from "@/components/SectionContent";
 import { useEffect, useRef, useState } from "react";
 
-const useMousePosition = () => {
+export const useMousePosition = () => {
   const [innerWidth, setInnerWidth] = useState(1);
   const [innerHeight, setInnerHeight] = useState(1);
   const clientX = useMotionValue(0);
