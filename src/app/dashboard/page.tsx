@@ -2,7 +2,7 @@ const HomeDashboard = async () => {
   return (
     <>
       <section className="">
-        
+        Homepage
       </section>
     </>
   );

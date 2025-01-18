@@ -39,7 +39,7 @@
 
 "use client";
 
-import { cva, VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 import { HTMLAttributes, useEffect, useState } from "react";
 import {
   animate,

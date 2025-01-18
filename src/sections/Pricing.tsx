@@ -3,7 +3,6 @@ import { SectionBorder } from "@/components/SectionBorder";
 import { SectionContent } from "@/components/SectionContent";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { features } from "process";
 import { twMerge } from "tailwind-merge";
 
 export const pricingTiers = [

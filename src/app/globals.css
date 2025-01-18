@@ -214,8 +214,12 @@
   }
 
   /* Sidebar Component */
+  /* .sidebar {
+    @apply hidden h-screen w-72 p-5 lg:flex;
+  } */
+
   .sidebar {
-    @apply hidden h-screen w-72 bg-black p-5 lg:flex;
+    @apply hidden lg:flex lg:w-[300px] border-r border-[var(--color-border)] h-screen p-4;
   }
 
   .sidebar-logo {

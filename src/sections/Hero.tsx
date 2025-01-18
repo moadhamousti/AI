@@ -9,7 +9,6 @@ import { Orbit } from "@/components/Orbit";
 import {
   motion,
   useMotionValue,
-  useMotionValueEvent,
   useScroll,
   useSpring,
   useTransform,

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans,Sora,Space_Grotesk } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { dark } from "@clerk/themes";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -7,11 +7,11 @@ import clsx from "clsx";
 
 // import { ThemeProvider as NextThemesProvider } from "next-themes";
 
-const dmSans = DM_Sans({ subsets: ["latin"] });
+// const dmSans = DM_Sans({ subsets: ["latin"] });
 
-const soraFont = Sora({
-  subsets: ["latin"],
-});
+// const soraFont = Sora({
+//   subsets: ["latin"],
+// });
 const spaceGroteskFont = Space_Grotesk({
   subsets: ["latin"],
 });

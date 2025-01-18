@@ -3,7 +3,7 @@ import { HTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
 export const Logo = (props: HTMLAttributes<HTMLDivElement>) => {
-  const { className, style, children, ...otherProps } = props;
+  const { className, style, ...otherProps } = props;
   return (
     <div
       className={twMerge(
