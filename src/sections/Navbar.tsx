@@ -1,6 +1,6 @@
 "use client"
 
-import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+import { SignedIn, UserButton } from "@clerk/clerk-react";
 
 export const Navbar = () => {
   return (
