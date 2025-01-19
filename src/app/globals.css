@@ -31,6 +31,10 @@
   }
 }
 
+.border-bottom{
+  @apply border-l border-r border-[var(--color-border)]
+}
+
 .auth {
   @apply flex-center min-h-screen w-full
 }

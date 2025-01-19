@@ -1,9 +1,11 @@
+import { Navbar } from "@/sections/Navbar";
+
 const HomeDashboard = async () => {
   return (
     <>
-      <section className="">
-        Homepage
-      </section>
+      <div className="">
+        <Navbar/>
+      </div>
     </>
   );
 };
